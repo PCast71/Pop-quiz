@@ -22,14 +22,6 @@ To run this project, you only need a web browser. No additional software or inst
    ```bash
    git clone git@github.com:PCast71/Pop-quiz.git
 
-   
-Sure! Here is a README file for your quiz project:
-
-markdown
-Copy code
-# Code Quiz
-
-A simple and interactive code quiz application built with HTML, CSS, and JavaScript. This project aims to test your knowledge of basic coding concepts and provide a fun way to learn.
 
 ## Features
 
