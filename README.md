@@ -1,92 +1,71 @@
-# Pop-quiz
+# 🧠 Pop-Quiz
 
-A simple and interactive code quiz application built with HTML, CSS, and JavaScript. This project aims to test your knowledge of basic coding concepts and provide a fun way to learn.
+Pop-Quiz is a quick-fire, browser-based quiz game built with HTML, CSS, and vanilla JavaScript. It tests your knowledge with random questions and a ticking clock — wrong answers shave off time, so speed and accuracy both matter!
 
-## Features
+This project demonstrates:
 
-- Start the quiz with a timer
-- Randomly shuffled questions
-- Deduct time for incorrect answers
-- Save your score and initials at the end of the quiz
+- DOM manipulation
+- Timers and intervals
+- Dynamic question rendering
+- LocalStorage for score tracking
+- Responsive UI without frameworks
 
-## Getting Started
+---
 
-### Prerequisites
+## 🚀 Live Demo
 
-To run this project, you only need a web browser. No additional software or installations are required.
+[👉 Try the Quiz Here](https://pcast71.github.io/Pop-quiz/)
 
-### Installation
+---
 
-1. Clone the repository or download the project files:
+## 🧪 How It Works
 
-   ```bash
-   git clone git@github.com:PCast71/Pop-quiz.git
+1. Click "Start Quiz" to begin.
+2. Answer questions before time runs out.
+3. Correct = +1 point | Wrong = -10 seconds.
+4. Save your score at the end with your initials.
+5. View the leaderboard anytime via the floating "🏆 High Scores" button.
 
+---
 
-## Features
+## 💠 Tech Stack
 
-- Start the quiz with a timer
-- Randomly shuffled questions
-- Deduct time for incorrect answers
-- Save your score and initials at the end of the quiz
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- LocalStorage API
 
-## Getting Started
+---
 
-### Prerequisites
+## 🔄 Features
 
-To run this project, you only need a web browser. No additional software or installations are required.
+- Randomized questions
+- Time penalty on wrong answers
+- Keyboard-friendly design
+- Score saving and persistent leaderboard
+- Mobile-friendly layout
+- Toast-style feedback for interactivity
 
-### Installation
+---
 
-1. Clone the repository or download the project files:
+## 📂 Installation
 
-   ```bash
-   git clone https://github.com/yourusername/code-quiz.git
-Navigate to the project directory:
+```bash
+git clone https://github.com/PCast71/Pop-quiz.git
+cd pop-quiz
+open index.html in your browser
+```
 
-bash
-Copy code
-cd code-quiz
-Open the index.html file in your web browser to start the quiz.
+Or just open `index.html` manually in your browser.
 
-Project Structure
-index.html: The main HTML file containing the structure of the quiz.
-styles.css: The CSS file for styling the quiz.
-script.js: The JavaScript file containing the logic for the quiz.
-Usage
-Open the index.html file in your web browser.
-Click the "Start Quiz" button to begin.
-Answer the questions by clicking on the answer buttons.
-The timer will start, and time will be deducted for incorrect answers.
-After answering all questions or when the timer reaches 0, the game is over.
-Enter your initials and save your score.
-Contributing
-Contributions are welcome! If you have suggestions or improvements, please create an issue or submit a pull request.
+---
 
-Fork the repository.
+## 🧠 Fun Fact
 
-Create your feature branch:
+This project was originally built in a haze of caffeine and chaos during a web dev bootcamp. It now lives on as a beautifully refactored piece of my personal dev journey.
 
-bash
-Copy code
-git checkout -b feature/YourFeature
-Commit your changes:
+---
 
-bash
-Copy code
-git commit -m 'Add some feature'
-Push to the branch:
+## 🗪 License
 
-bash
-Copy code
-git push origin feature/YourFeature
-Open a pull request.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Acknowledgements
-This project was inspired by various coding quizzes and educational tools.
-Special thanks to the open-source community for providing helpful resources and inspiration.
-Contact
-If you have any questions or feedback, feel free to contact me at patrickc77hhs@gmail.com
+MIT — do whatever you want with it, just don’t claim you wrote it unless your name is also Me 😎

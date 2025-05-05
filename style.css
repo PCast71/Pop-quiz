@@ -1,74 +1,172 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #fff;
+    padding: 20px;
 }
 
 #quiz-container {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 80%;
-    max-width: 600px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
     color: #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.correct {
+    background-color: #28a745 !important;
+    color: white;
+}
+
+.wrong {
+    background-color: #dc3545 !important;
+    color: white;
+}
+
+/* Buttons */
 button {
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin: 10px 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #0056b3;
-}
-
-.btn-container button {
-    margin: 10px 0;
-}
-
-#timer {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #555;
-}
-
-.hide {
-    display: none;
-}
-
-input[type="text"] {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    width: calc(100% - 22px);
-    box-sizing: border-box;
+    transform: translateY(-2px);
 }
 
 #save-score-btn {
-    margin-top: 10px;
     background-color: #28a745;
 }
 
 #save-score-btn:hover {
     background-color: #218838;
+}
+
+/* Answer Buttons */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-container .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    color: #333;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-container .btn:hover {
+    background-color: #d4d4d4;
+}
+
+/* Timer */
+#timer {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    color: #333;
+    font-size: 1.1rem;
+}
+
+#view-scores-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #ffc107;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #222;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+#view-scores-link:hover {
+    background-color: #e0a800;
+}
+
+
+#back-to-quiz-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #17a2b8;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+#back-to-quiz-link:hover {
+    background-color: #138496;
+}
+
+/* Input */
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Utility */
+.hide {
+    display: none;
 }

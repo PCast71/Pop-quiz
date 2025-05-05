@@ -154,6 +154,15 @@ const questions = [
 startButton.addEventListener('click', startGame);
 saveScoreButton.addEventListener('click', saveScore);
 
+function updateTimer() {
+    timeLeft--;
+    timerElement.innerText = timeLeft;
+    if (timeLeft <= 0) {
+        endGame();
+    }
+}
+
+
 function startGame() {
     console.log("Quiz started");
     startButton.classList.add('hide');
@@ -194,26 +203,30 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
+
+    Array.from(answerButtons.children).forEach(button => {
+        const isCorrect = button.dataset.correct === 'true';
+        button.classList.add(isCorrect ? 'correct' : 'wrong');
+        button.disabled = true;
+    });
+
     if (!correct) {
         timeLeft -= 10;
     } else {
         score++;
     }
+
     currentQuestionIndex++;
-    if (currentQuestionIndex < shuffledQuestions.length && timeLeft > 0) {
-        setNextQuestion();
-    } else {
-        endGame();
-    }
+
+    setTimeout(() => {
+        if (currentQuestionIndex < shuffledQuestions.length && timeLeft > 0) {
+            setNextQuestion();
+        } else {
+            endGame();
+        }
+    }, 800);
 }
 
-function updateTimer() {
-    timeLeft--;
-    timerElement.innerText = timeLeft;
-    if (timeLeft <= 0) {
-        endGame();
-    }
-}
 
 function endGame() {
     clearInterval(timerId);

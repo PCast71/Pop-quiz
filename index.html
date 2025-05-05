@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="highscores.html" id="view-scores-link">🏆 High Scores</a>
     <div id="quiz-container">
         <h1>Code Quiz</h1>
+        <div id="timer">Time: <span id="time">60</span>s</div>
         <button id="start-btn">Start Quiz</button>
         <div id="question-container" class="hide">
             <div id="question"></div>
@@ -20,7 +22,6 @@
             <input type="text" id="initials" placeholder="Enter your initials">
             <button id="save-score-btn">Save Score</button>
         </div>
-        <div id="timer">Time: <span id="time">60</span>s</div>
     </div>
     <script src="script.js"></script>
 </body>
